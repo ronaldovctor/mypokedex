@@ -1,0 +1,182 @@
+@mixin setTypeStyle($type) {
+	$currentColor: '';
+	$bgColor: '';
+	@if ($type == 'electric') {
+		$currentColor: var(--electric);
+		$bgColor: var(--electric-2);
+	}
+	@if ($type == 'steel') {
+		$currentColor: var(--steel);
+		$bgColor: var(--steel-2);
+	}
+	@if ($type == 'water') {
+		$currentColor: var(--water);
+		$bgColor: var(--water-2);
+	}
+	@if ($type == 'fairy') {
+		$currentColor: var(--fairy);
+		$bgColor: var(--fairy-2);
+	}
+	@if ($type == 'fire') {
+		$currentColor: var(--fire);
+		$bgColor: var(--fire-2);
+	}
+	@if ($type == 'fighting') {
+		$currentColor: var(--fighting);
+		$bgColor: var(--fighting-2);
+	}
+	@if ($type == 'flying') {
+		$currentColor: var(--flying);
+		$bgColor: var(--flying-2);
+	}
+	@if ($type == 'dragon') {
+		$currentColor: var(--dragon);
+		$bgColor: var(--dragon-2);
+	}
+	@if ($type == 'dark') {
+		$currentColor: var(--dark);
+		$bgColor: var(--dark-2);
+	}
+	@if ($type == 'bug') {
+		$currentColor: var(--bug);
+		$bgColor: var(--bug-2);
+	}
+	@if ($type == 'ghost') {
+		$currentColor: var(--ghost);
+		$bgColor: var(--ghost-2);
+	}
+	@if ($type == 'grass') {
+		$currentColor: var(--grass);
+		$bgColor: var(--grass-2);
+	}
+	@if ($type == 'ground') {
+		$currentColor: var(--ground);
+		$bgColor: var(--ground-2);
+	}
+	@if ($type == 'ice') {
+		$currentColor: var(--ice);
+		$bgColor: var(--ice-2);
+	}
+	@if ($type == 'normal') {
+		$currentColor: var(--normal);
+		$bgColor: var(--normal-2);
+	}
+	@if ($type == 'poison') {
+		$currentColor: var(--poison);
+		$bgColor: var(--poison-2);
+	}
+	@if ($type == 'psychic') {
+		$currentColor: var(--psychic);
+		$bgColor: var(--psychic-2);
+	}
+	@if ($type == 'rock') {
+		$currentColor: var(--rock);
+		$bgColor: var(--rock-2);
+	}
+
+	&.#{$type} {
+		border: 2px solid $currentColor;
+		background-color: $bgColor;
+		background-image: url('../../assets/#{$type}_type.svg');
+
+		.description,
+		.pokemon {
+			border: 2px solid $currentColor;
+		}
+
+		.xp {
+			background: $currentColor;
+		}
+	}
+}
+
+.card {
+	position: relative;
+	display: inline-block;
+	width: 270px;
+	height: 340px;
+	overflow: hidden;
+	margin: 30px 0;
+	padding: 15px 10px;
+	border: 2px solid red;
+	box-shadow: 0 0 0 5px white;
+	border-radius: 5px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: -120px 30px;
+	user-select: none;
+
+	@include setTypeStyle('electric');
+	@include setTypeStyle('steel');
+	@include setTypeStyle('water');
+	@include setTypeStyle('fairy');
+	@include setTypeStyle('fire');
+	@include setTypeStyle('fighting');
+	@include setTypeStyle('flying');
+	@include setTypeStyle('dragon');
+	@include setTypeStyle('dark');
+	@include setTypeStyle('bug');
+	@include setTypeStyle('ghost');
+	@include setTypeStyle('grass');
+	@include setTypeStyle('ground');
+	@include setTypeStyle('ice');
+	@include setTypeStyle('normal');
+	@include setTypeStyle('poison');
+	@include setTypeStyle('psychic');
+	@include setTypeStyle('rock');
+
+	.description {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 5px;
+		background-color: white;
+		width: 250px;
+		height: 50px;
+		border: 2px solid black;
+		border-radius: 5px;
+
+		.text {
+			padding: 0 5px;
+			font-size: 1.6em;
+			text-transform: uppercase;
+		}
+
+		.xp {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 62px;
+			height: 100%;
+			font-size: 1.5em;
+			font-weight: 600;
+			letter-spacing: 1.5px;
+			border-radius: 5px;
+			color: white;
+
+			span {
+				font-family: 'Poppins', sans-serif;
+			}
+		}
+	}
+
+	.pokemon {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 250px;
+		height: 250px;
+		background: rgba(255, 255, 255, 0.5);
+		backdrop-filter: blur(2px);
+		margin-top: 6px;
+		border: 2px solid black;
+		border-radius: 5px;
+
+		img {
+			position: absolute;
+			width: 100%;
+			z-index: 1;
+		}
+	}
+}

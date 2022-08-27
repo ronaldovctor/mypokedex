@@ -1,0 +1,16 @@
+section.header {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100px;
+	width: 100%;
+	padding: 60px 0;
+
+	.text {
+		width: 500px;
+		height: 110px;
+		background: url('../../assets/logo.png');
+		background-size: cover;
+		filter: drop-shadow(-6px 5px var(--shadow));
+	}
+}

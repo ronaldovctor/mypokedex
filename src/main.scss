@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+	--shadow: rgba(112, 112, 112, 0.35);
+	--red: #a31212;
+	--screen: #8cc7f8;
+	--electric: #e9b43b;
+	--electric-2: #fcedc9;
+	--water: #3692dc;
+	--water-2: #b4dbfc;
+	--steel: #5a8ea2;
+	--steel-2: #99b4be;
+	--fairy: #fb89eb;
+	--fairy-2: #fcc9f5;
+	--fire: #ff9741;
+	--fire-2: #fad8bd;
+	--fighting: #e0306a;
+	--fighting-2: #eebacb;
+	--flying: #89aae3;
+	--flying-2: #b8c8e4;
+	--dragon: #006fc9;
+	--dragon-2: #a6c3dbc9;
+	--dark: #5b5466;
+	--dark-2: #c9c9c9;
+	--bug: #83c300;
+	--bug-2: #d0e0b0;
+	--ghost: #4c6ab2;
+	--ghost-2: #b1bddb;
+	--grass: #38bf4b;
+	--grass-2: #a4c9a9;
+	--ground: #e87236;
+	--ground-2: #e2bfad;
+	--ice: #4cd1c0;
+	--ice-2: #b1e2dc;
+	--normal: #919aa2;
+	--normal-2: #d8d8d8;
+	--poison: #b567ce;
+	--poison-2: #d8bae2;
+	--psychic: #ff6675;
+	--psychic-2: #f8c3c8;
+	--rock: #c8b686;
+	--rock-2: #dad2bf;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+	font-family: 'Carter One', sans-serif;
+}
+
+body #root {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	min-height: 100vh;
+	background: url('./assets/bg\ 1.svg');
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
